@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css" >
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <nav class="navbar">
+    <span class="nav-header mx-auto">TODO LIST</span>        
+      </nav>
+      <div class="container vertical-center">
+          <div class="row main-container">
+              <div class="col-lg-4 card offset-lg-1 card category-container shadow bg-white rounded">
+                <div class="card-header">
+                  <span className="text2">Category</span>
+
+                </div>
+                <div class="input-btn-style">
+                  <input type="text" class="form-control category-title shadow" name="category_name" onChange={this.handleOnchange} placeholder="Add category" aria-label="Add category" aria-describedby="basic-addon2" value={this.state.category_name}>
+                  
+                    <button class="btn-rounded shadow" type="button" onClick={this.addValueToList}><i class="fa fa-plus" aria-hidden="true"></i></button>
+                  
+                </div>
+
+                <div class="content">
+                    {categoryListContents()}
+
+                      <div class="category-items " key={key} value={key}></div>
+                      <button class="btn-rounded" type="button" onClick={() => this.showList(key)}><i class="fa fa-plus" aria-hidden="true"></i></button>
+                   
+                      <button class="btn-rounded" type="button" onClick={() => this.removeCategory(key)}><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
+              
+                   
+              </div>
+              {this.state.task_id && <div class="col-lg-4 card offset-lg-2 card subcategory-container shadow bg-white rounded">
+                
+                <div class="card-header">
+                  <span className="text2">Sub Category</span>
+                </div>
+                <div class="input-btn-style "> 
+                  <input type="text" class="form-control category-title shadow"  name="task_name" onChange={this.handleOnchange} placeholder="Add task" value={this.state.task_name}  aria-label="Add task" aria-describedby="basic-addon2">
+                  {this.state.error.task && <div className="error"> {this.state.error.task} </div>}
+                    <button class="btn-rounded" type="button" onClick={this.addListItems}><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+
+                <div class="content">
+                  <!-- <input  class="check-position" type="checkbox">
+                  <input type="checkbox" checked={key.status} onChange></input>
+                    NEW CHECKBOX IMPLEMENTATION
+                  <button class="btn-rounded" type="button" onClick={() => this.toggleCheck(key)}>
+                    <i class="fa fa-check" aria-hidden="true" style={{display: { key.status ? 'block' : 'none'} }}></i>
+                    <i class="fa fa-square" aria-hidden="true" style={{display: { !key.status ? 'block' : 'none'} }}></i>
+                  </button> -->
+
+                  {listContents()}
+                  <button class="btn-rounded" type="button"><i class="fa fa-square" aria-hidden="true"></i></button>
+
+                  <div class="category-items">list 1</div>
+                  
+                  <button class="btn-rounded" type="button" onClick={() => this.removeTask(index)}><i class="fa fa-trash" aria-hidden="true"></i></button>
+               </div>
+                         
+              </div>}
+
+          </div>
+      </div>
+
+    </body>
+</html>

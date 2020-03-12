@@ -1,0 +1,96 @@
+.navbar{
+    background-color: #fb8c00;
+
+}
+.nav-header{
+    font-size: 26px;
+    color: #fff;
+    font-weight: 800;
+}
+.card{
+    background-color:orange;
+    height: 400px;
+}
+
+.main-container{
+    margin-top: 50px;
+
+}
+
+.main-container .card{
+
+}
+ .category-container{
+     padding:0px;
+ }
+ .subcategory-container{
+    padding:0px;
+}
+
+.card-header{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #ff8000d9;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+.form-control{
+    border-radius: 28px;
+    width: 324px;
+    margin-left: 6px;
+    display:inline-block;
+
+}
+.btn-rounded{
+
+    border-radius: 50%;
+    color: orange;
+    background-color: white;
+    border: 2px solid orange;
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+
+}
+
+.btn-rounded:hover{
+    background-color: orange;
+    color:white;
+    
+} 
+.input-btn-style{
+    margin-top:14px;
+}
+.category-items{
+    display: inline-block;
+    width: 280px;
+    height: 35px;
+    padding: 0px 8px;
+    margin:0px 5px;
+    border-radius: 18px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.content{
+    margin-top:140px;
+}
+
+.category-title:focus{
+    border: 2px solid orange;
+}
+.checkbox-style{
+    
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    position:absolute;
+
+}
+.check-position{
+    position:relative;
+}
