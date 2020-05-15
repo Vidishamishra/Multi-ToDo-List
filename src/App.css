@@ -140,6 +140,7 @@ i{
 
 .content{
   margin-top:140px;
+  overflow: auto;
 }
 
 .category-title:focus{
